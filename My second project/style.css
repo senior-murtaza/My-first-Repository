@@ -1,0 +1,425 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box; 
+    font-family: Poppins, sans-serif;
+}
+.sidebar {
+    padding: 110px 0 0 20px;
+    width: 300px;
+    height: 100%;
+    background: #f44336;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+}
+
+#icon {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: 70px;
+        left: 0;
+        top: 0;
+        padding: 20px 0 0 100px;
+        z-index: 1;
+    }
+    .sidebar #icon {
+        display: flex ;
+    }
+
+    .sidebar h2 br {
+        display: none;
+    }
+}
+
+.sidebar h2{
+    padding-left: 15px;
+    font-weight: 600;
+    color: white;
+    font-size: 26px;
+}
+
+.sidebar div {
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar div a {
+    padding: 13px 0 13px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 19px;                                        
+}
+
+.sidebar div a:hover {
+    width: 100%;
+    padding: 13px 0 13px 15px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+main {
+    margin-left: 340px;
+    padding: 20px;
+}
+
+@media (max-width: 992px) {
+    main {
+        margin: 0%;
+    }
+}
+
+/* Home */
+
+main #home {
+    padding: 80px 0 0 0;
+}
+
+main #home h1 {
+    font-size: 65px;
+    font-weight: 600;
+}
+
+/* Home */
+
+/* Showcase */
+
+#showcase {
+    margin-top: 30px;
+}
+
+.s-title {
+    font-size: 50px;
+    font-weight: 600;
+    color:rgb(244, 67, 54);
+}
+
+.hr {
+    background-color: red;
+    padding: 5.5px 30px;
+    border: none;
+    border-radius: 10px;
+    width: 20px;
+    margin-top: 25px;
+}
+
+.showcases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    padding-top: 50px;
+    row-gap: 10px;
+}
+
+@media screen and (max-width:992px) {
+    .showcases {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .showcases .down-image {
+        height: 200px;
+    }
+
+    .showcases .down-image {
+        height: 300px;
+    }
+    .showcases .up-image {
+        height: 300px;
+    }
+
+    .card-down .cover{
+        display: none;
+    }
+    .card-up .cover{
+        display: none;
+    }
+}
+
+.down-image {
+    width: 100%;
+    height: 40vh;
+    display: block;
+}
+
+.card-down {
+    position: relative;
+}
+
+.card-down .cover {
+    inset: 0;
+    background: rgba(0,0,0,0.4); /* کاور تیره */
+    transition: 0.2s;
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+}
+
+.card-up {
+    position: relative;
+}
+
+.card-up .cover {
+    inset: 0;
+    background: rgba(0,0,0,0.4); 
+    transition: 0.2s;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+}
+
+.up-image {
+    width: 100%;
+    height: 50vh;
+    display: block;
+}
+
+.card-up:hover .cover{
+    opacity: 0;
+}
+.card-down:hover .cover{
+    opacity:0;
+}
+
+/* Showcase */
+
+
+/* Services */
+
+#services {
+    padding: 85px 0;
+}
+
+#services p {
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+/* Services */
+
+
+/* Designers */
+
+#desingers p {
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+#desingers b {
+    display: inline-block;
+    margin: 20px 0  10px 0px;
+}
+
+.d-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:992px) {
+    .d-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .d-card {
+        height:100vh;
+        width:100%;
+        object-fit: cover;
+        background-color:rgb(240, 240, 240);
+    }
+}
+
+.d-card {
+    height:100%;
+    width:100%;
+    padding-bottom: 20px;
+    /* object-fit: cover; */
+    background-color:rgb(240, 240, 240);
+}
+
+.d-card img {
+    width: 100%;
+}
+
+.d-card h2 {
+    font-weight: 300;
+    padding-left: 15px;
+}
+
+.d-card p{
+    padding-left: 15px;
+    text-align: left;
+}
+
+.d-card span {
+    color: rgb(180, 180, 180);
+    padding: 13px 0 0 15px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+/* Designers */
+
+
+/* Packages */
+
+#packages {
+    padding: 80px 0 80px 0;
+}
+
+#packages p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.p-tables {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.h2-t-one {
+    width: 100%;
+    padding: 25px 10px;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    font-weight: 300;
+}
+
+.h2-t-two {
+    background-color: rgb(244, 67, 54);
+    width: 100%;
+    padding: 25px 10px;
+    color: white;
+    font-weight: 300;
+}
+
+.p-tables ul {
+    list-style: none;
+}
+
+.p-tables ul li {
+    background-color: rgb(245, 245, 245);
+    border-bottom: rgb(129, 129, 129) 1px solid;
+    width: 100%;
+    padding: 25px 10px;
+    color: black;
+    font-weight: 300;
+}
+
+.p-tables ul li span {
+    display: inline-block;
+    color: gray;
+    /* margin-top: 10px; */
+    font-size: 18px;
+}
+
+.li-btn-one {
+    background-color: white;
+    padding: 15px 25px;
+    border: none;
+    font-size: 17px;
+}
+
+.li-btn-one:hover {
+    background-color: black;
+    color: white;
+}
+
+.li-btn-two:hover {
+    background-color: black;
+    color: #f44336;
+}
+
+.li-btn-two {
+    background-color: rgb(244, 67, 54);
+    padding: 15px 25px;
+    border: none;
+    font-size: 17px;
+}
+/* Packages */
+
+/* Contact */
+
+#contact p {
+    padding: 20px 0;
+}
+
+#contact form input {
+    width: 100%;
+    padding: 12px 0;
+    outline: none;
+    border: 1px rgb(220, 220, 220) solid;
+    display: flex;
+}
+
+#imp-input {
+    background: rgb(244, 67, 54); 
+    color: white; 
+    border: none; 
+    padding: 15px 0; 
+    font-weight: 500; 
+    font-size: 16px;
+}
+
+#imp-input:hover {
+    background-color: #000;
+    color: #f44336;
+}
+
+/* Contact */
+
+/* footer */
+
+footer {
+    padding: 0%;
+    margin: 0%;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 15vh;
+}
+
+footer p {
+    color: black;
+    margin-left: 340px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+
+footer p a {
+    color: black;
+}
+
+footer p a:hover {
+    color: gray;
+}
+
+@media screen and (max-width:992px){
+    footer {
+        height: 25vh;
+    }
+
+    footer p {
+        color: black;
+        text-align: center;
+        padding-top: 15px;
+        margin-left: 40px;
+    }
+
+}
+/* footer */
