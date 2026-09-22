@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shared Equipment Checkout</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="app-header">
+      <div class="container">
+        <nav class="nav">
+          <h1>Shared Equipment Checkout</h1>
+        </nav>
+
+        <p>Manage shared equipment and session loans.</p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <!-- Summary -->
+        <section class="summary">
+          <div class="stat">
+            <strong id="equipmentCount">0</strong>
+            Equipment Types
+          </div>
+
+          <div class="stat">
+            <strong id="unavailableCount">0</strong>
+            Unavailable Types
+          </div>
+        </section>
+
+        <!-- Workspace -->
+        <div class="workspace">
+          <!-- Main Panel -->
+          <section class="main-panel">
+            <div class="panel">
+              <h2>Equipment</h2>
+
+              <!-- Search and Filter -->
+              <div class="toolbar">
+                <div class="field">
+                  <label for="searchInput"> Search </label>
+
+                  <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search equipment..."
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="categoryFilter"> Category </label>
+
+                  <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="Computer">Computer</option>
+                    <option value="Presentation">Presentation</option>
+                    <option value="Audio">Audio</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Equipment Table -->
+              <div class="table-wrap">
+                <table>
+                  <caption>
+                    Available Equipment
+                  </caption>
+
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Category</th>
+                      <th>Total</th>
+                      <th>Available</th>
+                    </tr>
+                  </thead>
+
+                  <tbody id="equipmentList">
+                    <!-- JavaScript will add equipment here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- Side Panel -->
+          <aside class="side-panel">
+            <!-- Checkout Form -->
+            <section class="panel">
+              <h2>New Checkout</h2>
+<!-- Checkout -->
+              <form id="checkoutForm">
+                <div class="field">
+                  <label for="borrower"> Borrower </label>
+
+                  <input
+                    type="text"
+                    id="borrower"
+                    placeholder="Enter borrower name"
+                  />
+                </div>
+
+                <div class="field">
+                  <label for="equipmentSelect"> Equipment </label>
+
+                  <select id="equipmentSelect">
+                    <option value="">Select equipment</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="quantity"> Quantity </label>
+
+                  <input
+                    type="number"
+                    id="quantity"
+                    min="1"
+                    placeholder="Enter quantity"
+                  />
+                </div>
+                <button type="submit">Checkout</button>
+              </form>
+
+              <div id="checkoutMessage"></div>
+            </section>
+          </aside>
+        </div>
+<!-- Checkout -->
+
+        <!-- Session Loans -->
+        <section class="panel">
+          <h2>Session Loans</h2>
+
+          <div id="loanList" class="cards">
+            <!-- JavaScript will add loan cards here -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="container">
+        <p>Shared Equipment Checkout</p>
+        <span>Murtaza Copyright!</span>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
